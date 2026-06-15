@@ -11,9 +11,60 @@
         content="Smart disaster management and emergency response platform with alerts, SOS, shelters, hospitals and rescue coordination.">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 
 <body>
+    <div class="top-alert-bar">
+
+    <div class="alert-left">
+
+        🚨 EMERGENCY STATUS
+
+    </div>
+
+    <div class="alert-center">
+
+        <span id="liveTime">00:00:00</span>
+
+        |
+
+        🟢 System Operational
+
+        |
+
+        📡 Live Monitoring Active
+
+    </div>
+
+</div>
+    <div class="emergency-widget">
+
+    <div class="widget-header">
+        🚨 Emergency
+    </div>
+
+    <div class="widget-body">
+
+        <div class="widget-status">
+            🟢 System Online
+        </div>
+
+        <div class="widget-status">
+            📡 Monitoring Active
+        </div>
+
+        <div class="widget-status">
+            🚑 Rescue Ready
+        </div>
+
+        <button class="widget-sos">
+            SOS
+        </button>
+
+    </div>
+
+</div>
 
     <!-- LOADER -->
 
@@ -55,6 +106,9 @@
             <li><a href="#">Contact</a></li>
 
         </ul>
+        <button id="themeToggle" class="theme-toggle">
+    🌙
+</button>
 
     </nav>
 
@@ -99,17 +153,38 @@
 
         <div class="hero-image">
 
-            <div class="glass-box">
+    <div class="glass-box">
 
-                <h2>AI Emergency Center</h2>
+        <h2>AI Command Center</h2>
 
-                <p>24/7 Disaster Monitoring</p>
-
-                <h3>ACTIVE</h3>
-
-            </div>
-
+        <div class="status">
+            <span class="dot green"></span>
+            System Online
         </div>
+
+        <div class="status">
+            🌊 Flood : Moderate
+        </div>
+
+        <div class="status">
+            🌪 Cyclone : Tracking
+        </div>
+
+        <div class="status">
+            🔥 Wildfire : High
+        </div>
+
+        <div class="status">
+            🚑 Rescue : Active
+        </div>
+
+        <div class="status">
+            📡 Live Monitoring
+        </div>
+
+    </div>
+
+</div>
 
     </section>
     <section class="command-center">
@@ -181,6 +256,630 @@
     </div>
 
 </section>
+<section class="hero-stats">
+
+    <div class="hero-stat">
+        <h2>24</h2>
+        <p>Active Alerts</p>
+    </div>
+
+    <div class="hero-stat">
+        <h2>186</h2>
+        <p>Rescue Teams</p>
+    </div>
+
+    <div class="hero-stat">
+        <h2>512</h2>
+        <p>Hospitals</p>
+    </div>
+
+    <div class="hero-stat">
+        <h2>1204</h2>
+        <p>Shelters</p>
+    </div>
+
+</section>
+<section class="alert-ticker">
+
+    <div class="ticker-title">
+        🚨 LIVE ALERTS
+    </div>
+
+    <div class="ticker-content">
+
+        <span>🌊 Flood Warning - River levels rising in monitored zones.</span>
+
+        <span>🌪 Cyclone Watch - Coastal regions under observation.</span>
+
+        <span>🔥 Wildfire Alert - High-risk forest areas being monitored.</span>
+
+        <span>🌡 Heatwave Advisory - Stay hydrated and avoid peak sun hours.</span>
+
+        <span>🚑 Emergency Services - Rescue teams on standby.</span>
+
+    </div>
+
+</section>
+<section class="operations-dashboard">
+
+    <h2>Emergency Operations Dashboard</h2>
+
+    <div class="dashboard-grid">
+
+        <div class="dashboard-card">
+            <h3>🚨 Active Alerts</h3>
+            <h1>24</h1>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>🚑 Rescue Units</h3>
+            <h1>186</h1>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>🏥 Hospitals</h3>
+            <h1>512</h1>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>🏠 Shelters</h3>
+            <h1>1204</h1>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>👥 Volunteers</h3>
+            <h1>5400</h1>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>🟢 System Status</h3>
+            <h1>ONLINE</h1>
+        </div>
+
+    </div>
+
+</section>
+<section class="response-network">
+
+    <h2>Disaster Response Network</h2>
+
+    <p>Connected emergency services for rapid disaster response.</p>
+
+    <div class="network-grid">
+
+        <div class="network-card">
+            <h3>🏥 Hospitals</h3>
+            <p>Emergency care and trauma support.</p>
+        </div>
+
+        <div class="network-card">
+            <h3>🏠 Shelters</h3>
+            <p>Safe temporary accommodation.</p>
+        </div>
+
+        <div class="network-card">
+            <h3>🚑 Rescue Teams</h3>
+            <p>24/7 emergency rescue operations.</p>
+        </div>
+
+        <div class="network-card">
+            <h3>🚒 Fire Services</h3>
+            <p>Wildfire and fire emergency response.</p>
+        </div>
+
+        <div class="network-card">
+            <h3>👮 Police Support</h3>
+            <p>Security and evacuation assistance.</p>
+        </div>
+
+        <div class="network-card">
+            <h3>📦 Relief Centers</h3>
+            <p>Food, water and essential supplies.</p>
+        </div>
+
+    </div>
+
+</section>
+<section class="live-map">
+
+    <h2>🗺 Live Disaster Response Map</h2>
+
+    <p>
+        Monitor emergency locations and critical response infrastructure.
+    </p>
+
+    <div class="map-container">
+
+        <div class="map-box">
+
+            <div class="map-point flood">
+                🌊 Flood Zone
+            </div>
+
+            <div class="map-point hospital">
+                🏥 Hospital
+            </div>
+
+            <div class="map-point shelter">
+                🏠 Shelter
+            </div>
+
+            <div class="map-point rescue">
+                🚑 Rescue
+            </div>
+
+            <div class="map-point fire">
+                🚒 Fire Station
+            </div>
+
+            <div class="map-point police">
+                👮 Police
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="sos-center">
+
+    <h2>🚨 Emergency SOS Center</h2>
+
+    <p>Get immediate assistance during emergencies.</p>
+
+    <div class="sos-grid">
+
+        <div class="sos-main">
+
+            <button class="sos-btn">
+                SOS
+            </button>
+
+            <h3>Emergency Assistance</h3>
+
+            <p>One-click emergency activation.</p>
+
+        </div>
+
+        <div class="sos-card">
+            📍
+            <h3>GPS Location</h3>
+            <p>Share your live location.</p>
+        </div>
+
+        <div class="sos-card">
+            🚑
+            <h3>Ambulance</h3>
+            <p>Request medical assistance.</p>
+        </div>
+
+        <div class="sos-card">
+            🚒
+            <h3>Fire Service</h3>
+            <p>Emergency fire response.</p>
+        </div>
+
+        <div class="sos-card">
+            👮
+            <h3>Police</h3>
+            <p>Security and evacuation support.</p>
+        </div>
+
+        <div class="sos-card">
+            🏥
+            <h3>Hospitals</h3>
+            <p>Nearby emergency hospitals.</p>
+        </div>
+
+    </div>
+
+</section>
+<section class="ai-center">
+
+    <h2>🤖 AI Disaster Prediction Center</h2>
+
+    <p>AI-powered disaster risk monitoring and analysis.</p>
+
+    <div class="ai-grid">
+
+        <div class="ai-card">
+            <h3>🌊 Flood Risk</h3>
+            <div class="risk-bar">
+                <div class="risk flood-risk"></div>
+            </div>
+            <span>68%</span>
+        </div>
+
+        <div class="ai-card">
+            <h3>🌪 Cyclone Risk</h3>
+            <div class="risk-bar">
+                <div class="risk cyclone-risk"></div>
+            </div>
+            <span>45%</span>
+        </div>
+
+        <div class="ai-card">
+            <h3>🔥 Wildfire Risk</h3>
+            <div class="risk-bar">
+                <div class="risk wildfire-risk"></div>
+            </div>
+            <span>82%</span>
+        </div>
+
+        <div class="ai-card">
+            <h3>🌡 Heatwave Risk</h3>
+            <div class="risk-bar">
+                <div class="risk heat-risk"></div>
+            </div>
+            <span>60%</span>
+        </div>
+
+    </div>
+
+</section>
+<section class="weather-hub">
+
+    <h2>🌦 Weather & Live Monitoring Hub</h2>
+
+    <p>Real-time environmental conditions and emergency weather updates.</p>
+
+    <div class="weather-grid">
+
+        <div class="weather-card">
+            <h3>🌡 Temperature</h3>
+            <h1>32°C</h1>
+        </div>
+
+        <div class="weather-card">
+            <h3>🌧 Rainfall</h3>
+            <h1>18 mm</h1>
+        </div>
+
+        <div class="weather-card">
+            <h3>💨 Wind Speed</h3>
+            <h1>24 km/h</h1>
+        </div>
+
+        <div class="weather-card">
+            <h3>💧 Humidity</h3>
+            <h1>68%</h1>
+        </div>
+
+        <div class="weather-card">
+            <h3>⚠ Weather Alert</h3>
+            <h1>Moderate</h1>
+        </div>
+
+        <div class="weather-card">
+            <h3>🛰 Live Status</h3>
+            <h1>ONLINE</h1>
+        </div>
+
+    </div>
+
+</section>
+<section class="volunteer-section">
+
+    <h2>🤝 Volunteer & Relief Network</h2>
+
+    <p>
+        Join hands to support disaster response and relief operations.
+    </p>
+
+    <div class="volunteer-grid">
+
+        <div class="volunteer-card">
+            <h3>👥 Volunteers</h3>
+            <p>
+                Register and help during emergencies.
+            </p>
+        </div>
+
+        <div class="volunteer-card">
+            <h3>❤️ Donations</h3>
+            <p>
+                Support relief efforts with essential resources.
+            </p>
+        </div>
+
+        <div class="volunteer-card">
+            <h3>🏕 Relief Camps</h3>
+            <p>
+                Safe accommodation and emergency supplies.
+            </p>
+        </div>
+
+        <div class="volunteer-card">
+            <h3>📦 Relief Distribution</h3>
+            <p>
+                Food, water and emergency kits.
+            </p>
+        </div>
+
+        <div class="volunteer-card">
+            <h3>🤝 NGO Partners</h3>
+            <p>
+                Coordinated humanitarian support.
+            </p>
+        </div>
+
+        <div class="volunteer-card">
+            <h3>🚚 Logistics</h3>
+            <p>
+                Transportation and supply chain assistance.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<section class="resources-section">
+
+    <h2>📚 Emergency Resources & Preparedness</h2>
+
+    <p>
+        Essential information to help communities prepare for disasters.
+    </p>
+
+    <div class="resources-grid">
+
+        <div class="resource-card">
+            <h3>📖 Safety Guides</h3>
+            <p>Learn how to stay safe during emergencies.</p>
+        </div>
+
+        <div class="resource-card">
+            <h3>🎒 Emergency Kit</h3>
+            <p>Prepare food, water and medical supplies.</p>
+        </div>
+
+        <div class="resource-card">
+            <h3>📞 Emergency Contacts</h3>
+            <p>Quick access to important emergency numbers.</p>
+        </div>
+
+        <div class="resource-card">
+            <h3>📢 Government Advisories</h3>
+            <p>Latest official safety recommendations.</p>
+        </div>
+
+        <div class="resource-card">
+            <h3>🏠 Family Preparedness</h3>
+            <p>Create an emergency plan for your family.</p>
+        </div>
+
+        <div class="resource-card">
+            <h3>🎥 Training</h3>
+            <p>Disaster awareness and preparedness training.</p>
+        </div>
+
+    </div>
+
+</section>
+<section class="testimonials">
+
+    <h2>⭐ Success Stories</h2>
+
+    <p>
+        Real experiences from citizens, volunteers and rescue teams.
+    </p>
+
+    <div class="testimonial-grid">
+
+        <div class="testimonial-card">
+
+            <h3>👨 Citizen</h3>
+
+            <p>
+                Early flood alerts helped our family evacuate safely.
+            </p>
+
+        </div>
+
+        <div class="testimonial-card">
+
+            <h3>🚑 Rescue Team</h3>
+
+            <p>
+                Real-time coordination improved rescue operations.
+            </p>
+
+        </div>
+
+        <div class="testimonial-card">
+
+            <h3>🤝 Volunteer</h3>
+
+            <p>
+                The platform helped us deliver relief supplies faster.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="faq-section">
+
+    <h2>❓ Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            How does the SOS system work?
+        </button>
+
+        <div class="faq-answer">
+            <p>
+                Press the SOS button to quickly access emergency support services.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            How can I find nearby shelters?
+        </button>
+
+        <div class="faq-answer">
+            <p>
+                Use the shelter section to locate available emergency shelters.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="faq-item">
+
+        <button class="faq-question">
+            How can I become a volunteer?
+        </button>
+
+        <div class="faq-answer">
+            <p>
+                Register through the Volunteer Network section.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<section class="contact-section">
+
+    <h2>📞 Emergency Contact Center</h2>
+
+    <p>
+        Get in touch with emergency support services.
+    </p>
+
+    <div class="contact-grid">
+
+        <div class="contact-info">
+
+            <h3>🚨 Emergency Helpline</h3>
+
+            <p>National Emergency : 112</p>
+
+            <p>Fire Service : 101</p>
+
+            <p>Ambulance : 108</p>
+
+            <p>Police : 100</p>
+
+        </div>
+
+        <div class="contact-form">
+
+            <input type="text" placeholder="Your Name">
+
+            <input type="email" placeholder="Email Address">
+
+            <textarea placeholder="Emergency Message"></textarea>
+
+            <button>Send Message</button>
+
+        </div>
+
+    </div>
+    <section class="location-section">
+
+    <h2>📍 Emergency Location Center</h2>
+
+    <p>Find your current location for faster emergency assistance.</p>
+
+    <div class="location-box">
+
+        <button id="locationBtn">
+            📍 Get My Location
+        </button>
+
+        <h3 id="locationStatus">
+            Waiting for location...
+        </h3>
+
+        <p id="latitude">
+            Latitude: --
+        </p>
+
+        <p id="longitude">
+            Longitude: --
+        </p>
+
+    </div>
+
+</section>
+
+</section>
+<section class="real-map-section">
+
+    <h2>🗺 Live Disaster Map</h2>
+
+    <p>Track emergency locations and nearby response infrastructure.</p>
+
+    <div id="map"></div>
+
+</section>
+<footer class="footer">
+
+    <div class="footer-grid">
+
+        <div class="footer-box">
+
+            <h3>DisasterShield AI</h3>
+
+            <p>
+                Smart disaster management and emergency response platform.
+            </p>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <a href="#">Home</a>
+            <a href="#">SOS</a>
+            <a href="#">Hospitals</a>
+            <a href="#">Shelters</a>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Emergency</h3>
+
+            <p>📞 112</p>
+            <p>🚑 108</p>
+            <p>🚒 101</p>
+            <p>👮 100</p>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Newsletter</h3>
+
+            <input type="email" placeholder="Email">
+
+            <button class="subscribe-btn">
+                Subscribe
+            </button>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+
+        © 2026 DisasterShield AI | Emergency Response Platform
+
+    </div>
+
+</footer>
 
     <!-- LIVE ALERT -->
 
@@ -394,6 +1093,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 </body>
 
