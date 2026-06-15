@@ -1,319 +1,400 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RoadRescue AI</title>
+    <title>DisasterShield AI | Smart Emergency Response</title>
 
-<link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="Smart disaster management and emergency response platform with alerts, SOS, shelters, hospitals and rescue coordination.">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="navbar">
+    <!-- LOADER -->
 
-<div class="container">
+    <div id="loader">
+        <div class="spinner"></div>
+        <h2>DisasterShield AI</h2>
+    </div>
 
-<div class="logo">
-<i class="fa-solid fa-truck-medical"></i>
-RoadRescue AI
-</div>
+    <!-- PARTICLES -->
 
-<nav>
-<a href="#status">Status</a>
-<a href="#services">Services</a>
-<a href="#stats">Stats</a>
-<a href="#faq">FAQ</a>
-<a href="#contact">Contact</a>
-</nav>
+    <div id="particles"></div>
 
-<button class="cta-btn">
-Emergency Help
-</button>
+    <!-- CUSTOM CURSOR -->
 
-</div>
+    <div class="cursor"></div>
 
-</header>
+    <!-- NAVBAR -->
 
-<section class="hero">
+    <nav>
 
-<div class="container hero-grid">
+        <div class="logo">
 
-<div class="hero-content">
+            🛡 DisasterShield AI
 
-<span class="badge">
-● Live Support Available 24/7
-</span>
+        </div>
 
-<h1>
-Stranded?
-<span>Help Arrives</span>
-in Under 15 Minutes.
-</h1>
+        <ul>
 
-<p>
-AI-powered roadside assistance platform connecting drivers with certified emergency technicians in real time.
-</p>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Emergency Alerts</a></li>
+            <li><a href="#">Live Map</a></li>
+            <li><a href="#">SOS</a></li>
+            <li><a href="#">Rescue Teams</a></li>
+            <li><a href="#">Shelters</a></li>
+            <li><a href="#">Hospitals</a></li>
+            <li><a href="#">Weather</a></li>
+            <li><a href="#">Volunteer</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
 
-<div class="hero-buttons">
+        </ul>
 
-<button class="primary-btn">
-Request Help
-</button>
+    </nav>
 
-<button class="secondary-btn">
-Track Technician
-</button>
+    <!-- HERO -->
 
-</div>
+    <section class="hero">
 
-</div>
+        <div class="hero-text">
 
-<div class="hero-card">
+            <h1>
 
-<i class="fa-solid fa-car-side"></i>
+                Protecting Lives Through Smart Disaster Response
 
-<h3>Emergency Assistance Active</h3>
+            </h1>
 
-<p>Technician Assigned</p>
+            <p>
 
-<div class="live-status">
-<p>📍 Technician 3.4 KM Away</p>
-<p>⏱ ETA: 14 Minutes</p>
-<p>🟢 Live Tracking Enabled</p>
-</div>
+                Real-time alerts, emergency assistance,
+                nearby shelters, rescue coordination,
+                disaster preparedness and AI-powered
+                emergency management.
 
-</div>
+            </p>
 
-</div>
+            <div class="buttons">
 
-</section>
+                <a href="#" class="btn red">
 
-<section id="status" class="status">
+                    🚨 Emergency SOS
 
-<div class="container">
+                </a>
 
-<h2>Live Network Status</h2>
+                <a href="#" class="btn blue">
 
-<div class="status-grid">
+                    📡 View Live Alerts
 
-<div class="card">
-<h3>342</h3>
-<p>Technicians Online</p>
-</div>
+                </a>
 
-<div class="card">
-<h3>14 Min</h3>
-<p>Average Response Time</p>
-</div>
+            </div>
 
-<div class="card">
-<h3>24/7</h3>
-<p>Emergency Coverage</p>
-</div>
+        </div>
 
-<div class="card">
-<h3>Live</h3>
-<p>Vehicle Tracking</p>
-</div>
+        <div class="hero-image">
 
-</div>
+            <div class="glass-box">
 
-</div>
+                <h2>AI Emergency Center</h2>
 
-</section>
+                <p>24/7 Disaster Monitoring</p>
 
-<section id="services" class="services">
+                <h3>ACTIVE</h3>
 
-<div class="container">
+            </div>
 
-<h2>Emergency Services</h2>
+        </div>
 
-<div class="service-grid">
+    </section>
+    <section class="command-center">
 
-<div class="service-card">
-<i class="fa-solid fa-truck"></i>
-<h3>Towing</h3>
-</div>
+    <h2>🌍 Live Disaster Command Center</h2>
 
-<div class="service-card">
-<i class="fa-solid fa-circle-dot"></i>
-<h3>Flat Tire Assistance</h3>
-</div>
+    <p>
+        Real-time emergency monitoring and AI disaster analysis.
+    </p>
 
-<div class="service-card">
-<i class="fa-solid fa-bolt"></i>
-<h3>Battery Jump Start</h3>
-</div>
+    <div class="command-grid">
 
-<div class="service-card">
-<i class="fa-solid fa-gas-pump"></i>
-<h3>Fuel Delivery</h3>
-</div>
+        <div class="command-card">
 
-<div class="service-card">
-<i class="fa-solid fa-key"></i>
-<h3>Lockout Assistance</h3>
-</div>
+            <span class="pulse blue"></span>
 
-<div class="service-card">
-<i class="fa-solid fa-triangle-exclamation"></i>
-<h3>Vehicle Recovery</h3>
-</div>
+            <h3>🌊 Flood Risk</h3>
 
-</div>
+            <h4>Moderate</h4>
 
-</div>
+            <div class="progress">
+                <div class="bar flood"></div>
+            </div>
 
-</section>
+        </div>
 
-<section id="stats" class="stats">
+        <div class="command-card">
 
-<div class="container">
+            <span class="pulse green"></span>
 
-<h2>Our Impact</h2>
+            <h3>🌍 Earthquake</h3>
 
-<div class="stats-grid">
+            <h4>Low</h4>
 
-<div class="card">
-<h3>50000+</h3>
-<p>Vehicles Assisted</p>
-</div>
+            <div class="progress">
+                <div class="bar earthquake"></div>
+            </div>
 
-<div class="card">
-<h3>1200+</h3>
-<p>Certified Mechanics</p>
-</div>
+        </div>
 
-<div class="card">
-<h3>98%</h3>
-<p>Customer Satisfaction</p>
-</div>
+        <div class="command-card">
 
-<div class="card">
-<h3>24/7</h3>
-<p>Service Availability</p>
-</div>
+            <span class="pulse red"></span>
 
-</div>
+            <h3>🔥 Wildfire</h3>
 
-</div>
+            <h4>High</h4>
+
+            <div class="progress">
+                <div class="bar wildfire"></div>
+            </div>
+
+        </div>
+
+        <div class="command-card">
+
+            <span class="pulse cyan"></span>
+
+            <h3>🌪 Cyclone</h3>
+
+            <h4>Tracking</h4>
+
+            <div class="progress">
+                <div class="bar cyclone"></div>
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section class="request-form">
+    <!-- LIVE ALERT -->
 
-<div class="container">
+    <section class="alert-ticker">
 
-<h2>Request Emergency Assistance</h2>
+        <div class="ticker-title">
 
-<form>
+            🚨 LIVE ALERTS
 
-<select>
-<option>Select Vehicle Type</option>
-<option>Car</option>
-<option>Bike</option>
-<option>Truck</option>
-</select>
+        </div>
 
-<select>
-<option>Select Breakdown Type</option>
-<option>Flat Tire</option>
-<option>Battery Issue</option>
-<option>Fuel Delivery</option>
-<option>Lockout</option>
-</select>
+        <div class="ticker">
 
-<input type="text" placeholder="Enter Your Location">
+            <div class="ticker-content">
 
-<button type="submit">
-Request Help
-</button>
+                Flood Warning • Cyclone Monitoring • Heatwave Alert • Earthquake Activity • Wildfire Risk • Heavy Rainfall • Emergency Shelter Open
 
-</form>
+            </div>
 
-</div>
+        </div>
 
-</section>
+    </section>
 
-<section class="testimonials">
+    <!-- STATS -->
 
-<div class="container">
+    <section class="stats">
 
-<h2>Customer Reviews</h2>
+        <div class="card">
 
-<div class="service-grid">
+            <h1>100000+</h1>
 
-<div class="service-card">
-<h3>Rahul Sharma</h3>
-<p>Help arrived within 12 minutes. Amazing service.</p>
-</div>
+            <p>Lives Protected</p>
 
-<div class="service-card">
-<h3>Priya Verma</h3>
-<p>Battery died at night. RoadRescue saved me.</p>
-</div>
+        </div>
 
-<div class="service-card">
-<h3>Amit Singh</h3>
-<p>Fast towing service and professional staff.</p>
-</div>
+        <div class="card">
 
-</div>
+            <h1>5000+</h1>
 
-</div>
+            <p>Rescue Operations</p>
 
-</section>
+        </div>
 
-<section id="faq" class="faq">
+        <div class="card">
 
-<div class="container">
+            <h1>1000+</h1>
 
-<h2>Frequently Asked Questions</h2>
+            <p>Emergency Shelters</p>
 
-<div class="faq-item">
-<h3>How quickly can help arrive?</h3>
-<p>Average response time is around 14 minutes.</p>
-</div>
+        </div>
 
-<div class="faq-item">
-<h3>Is service available 24/7?</h3>
-<p>Yes, emergency assistance is available all day and night.</p>
-</div>
+        <div class="card">
 
-<div class="faq-item">
-<h3>Do you cover all vehicle types?</h3>
-<p>Cars, bikes, SUVs and commercial vehicles are supported.</p>
-</div>
+            <h1>500+</h1>
 
-</div>
+            <p>Partner Hospitals</p>
 
-</section>
+        </div>
 
-<footer id="contact">
+    </section>
 
-<div class="container">
+    <!-- FEATURES -->
 
-<h2>RoadRescue AI</h2>
+    <section class="features">
 
-<p>AI Powered Roadside Assistance Platform</p>
+        <h2>
 
-<p>Emergency Hotline: +1 800 123 4567</p>
+            Emergency Response Services
 
-<p>support@roadrescueai.com</p>
+        </h2>
 
-</div>
+        <p>
 
-</footer>
+            Integrated emergency management platform.
 
-<script src="script.js"></script>
+        </p>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <div class="icon">🌊</div>
+                <h3>Flood Monitoring</h3>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🌍</div>
+                <h3>Earthquake Alerts</h3>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🔥</div>
+                <h3>Wildfire Tracking</h3>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🌪</div>
+                <h3>Cyclone Tracking</h3>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🚑</div>
+                <h3>Emergency SOS</h3>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🏥</div>
+                <h3>Hospital Finder</h3>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🏠</div>
+                <h3>Shelter Finder</h3>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">🤝</div>
+                <h3>Volunteer Network</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- AI DASHBOARD -->
+
+    <section class="dashboard">
+
+        <h2>
+
+            AI Disaster Prediction
+
+        </h2>
+
+        <div class="dashboard-grid">
+
+            <div class="dashboard-card">
+
+                <h3>Flood Risk</h3>
+
+                <div class="meter">
+
+                    <div class="fill flood"></div>
+
+                </div>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h3>Cyclone Risk</h3>
+
+                <div class="meter">
+
+                    <div class="fill cyclone"></div>
+
+                </div>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h3>Heatwave</h3>
+
+                <div class="meter">
+
+                    <div class="fill heat"></div>
+
+                </div>
+
+            </div>
+
+            <div class="dashboard-card">
+
+                <h3>Earthquake</h3>
+
+                <div class="meter">
+
+                    <div class="fill quake"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>
+
+            DisasterShield AI
+
+        </h2>
+
+        <p>
+
+            Smart Disaster Management &
+            Emergency Response Platform.
+
+        </p>
+
+        <p>
+
+            Emergency Helpline : 112
+
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
