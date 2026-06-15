@@ -1,0 +1,224 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#0a0f1c;
+color:#fff;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:#111827;
+padding:20px 0;
+}
+
+.navbar .container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#00c3ff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+.cta-btn{
+background:#ff7b00;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:8px;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+padding:80px 0;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.badge{
+display:inline-block;
+background:#1e293b;
+padding:10px 15px;
+border-radius:20px;
+margin-bottom:20px;
+}
+
+.hero-content h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero-content h1 span{
+color:#00c3ff;
+}
+
+.hero-content p{
+color:#cbd5e1;
+margin-bottom:20px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+}
+
+.primary-btn{
+background:#00c3ff;
+border:none;
+color:white;
+padding:12px 25px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.secondary-btn{
+background:none;
+color:white;
+border:1px solid white;
+padding:12px 25px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.hero-card{
+background:#111827;
+padding:40px;
+border-radius:15px;
+text-align:center;
+}
+
+.hero-card i{
+font-size:60px;
+color:#00c3ff;
+margin-bottom:15px;
+}
+
+/* SECTIONS */
+
+.status,
+.services,
+.stats,
+.request-form,
+.testimonials,
+.faq{
+padding:70px 0;
+}
+
+h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+/* STATUS */
+
+.status-grid,
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.card{
+background:#111827;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.card h3{
+color:#00c3ff;
+}
+
+/* SERVICES */
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.service-card{
+background:#111827;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.service-card i{
+font-size:40px;
+color:#ff7b00;
+margin-bottom:15px;
+}
+
+/* FORM */
+
+form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,
+select{
+padding:12px;
+border:none;
+border-radius:8px;
+}
+
+form button{
+background:#00c3ff;
+color:white;
+border:none;
+padding:12px;
+border-radius:8px;
+}
+
+/* FAQ */
+
+.faq-item{
+background:#111827;
+padding:20px;
+border-radius:12px;
+margin-bottom:15px;
+}
+
+/* FOOTER */
+
+footer{
+background:#111827;
+padding:50px 0;
+text-align:center;
+}
+
+/* MOBILE */
+
