@@ -1,179 +1,190 @@
-// =======================
-// ROADRESCUE AI SCRIPT
-// =======================
+/* ==========================
+   LOADER
+========================== */
 
-// Page Loaded
-window.onload = function(){
-console.log("RoadRescue AI Loaded");
-};
+window.addEventListener("load", function () {
 
-// =======================
-// Hero Buttons
-// =======================
+    const loader = document.getElementById("loader");
 
-const requestBtn =
-document.querySelector(".primary-btn");
+    if (loader) {
 
-if(requestBtn){
+        setTimeout(function () {
 
-```
-requestBtn.addEventListener(
-"click",
-function(){
+            loader.style.opacity = "0";
+
+            setTimeout(function () {
+
+                loader.style.display = "none";
+
+            }, 500);
+
+        }, 1500);
+
+    }
+
+});
+
+
+/* ==========================
+   CUSTOM CURSOR
+========================== */
+
+const cursor = document.querySelector(".cursor");
+
+if (cursor) {
+
+    document.addEventListener("mousemove", function (e) {
+
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+
+    });
+
+}
+
+
+/* ==========================
+   FEATURE CARDS
+========================== */
+
+const cards = document.querySelectorAll(".feature-card");
+
+cards.forEach(function (card) {
+
+    card.addEventListener("mouseenter", function () {
+
+        card.style.transform = "translateY(-10px) scale(1.03)";
+
+    });
+
+    card.addEventListener("mouseleave", function () {
+
+        card.style.transform = "translateY(0px) scale(1)";
+
+    });
+
+});
+
+
+/* ==========================
+   ANIMATED COUNTERS
+========================== */
+
+const counters = document.querySelectorAll(".card h1");
+
+counters.forEach(function (counter) {
+
+    let target = parseInt(counter.textContent.replace("+", ""));
+
+    let count = 0;
+
+    let speed = Math.ceil(target / 100);
+
+    function updateCounter() {
+
+        if (count < target) {
+
+            count += speed;
+
+            if (count > target) {
+
+                count = target;
+
+            }
+
+            counter.textContent = count + "+";
+
+            requestAnimationFrame(updateCounter);
+
+        } else {
+
+            counter.textContent = target + "+";
+
+        }
+
+    }
+
+    updateCounter();
+
+});
+
+
+/* ==========================
+   EMERGENCY POPUP
+========================== */
+
+setTimeout(function () {
 
     alert(
-    "Emergency request initiated!"
+        "🚨 Emergency Alert System Active!\n\nStay informed and follow safety instructions."
     );
 
-});
-```
+}, 4000);
 
-}
 
-const trackBtn =
-document.querySelector(".secondary-btn");
+/* ==========================
+   SCROLL TO TOP BUTTON
+========================== */
 
-if(trackBtn){
+const topBtn = document.createElement("button");
 
-```
-trackBtn.addEventListener(
-"click",
-function(){
+topBtn.textContent = "↑";
 
-    alert(
-    "Technician tracking enabled!"
-    );
+topBtn.style.position = "fixed";
+topBtn.style.right = "20px";
+topBtn.style.bottom = "20px";
+topBtn.style.width = "50px";
+topBtn.style.height = "50px";
+topBtn.style.border = "none";
+topBtn.style.borderRadius = "50%";
+topBtn.style.background = "#00d4ff";
+topBtn.style.color = "#000";
+topBtn.style.fontSize = "22px";
+topBtn.style.cursor = "pointer";
+topBtn.style.display = "none";
+topBtn.style.zIndex = "9999";
 
-});
-```
+document.body.appendChild(topBtn);
 
-}
+window.addEventListener("scroll", function () {
 
-// =======================
-// Form Validation
-// =======================
+    if (window.scrollY > 300) {
 
-const form =
-document.querySelector("form");
+        topBtn.style.display = "block";
 
-if(form){
+    } else {
 
-form.addEventListener(
-"submit",
-function(e){
+        topBtn.style.display = "none";
 
-```
-e.preventDefault();
-
-const location =
-document.querySelector(
-'input[type="text"]'
-);
-
-if(
-location.value.trim()===""
-){
-
-    alert(
-    "Please enter your location"
-    );
-
-    return;
-
-}
-
-alert(
-"Help request submitted successfully!"
-);
-
-form.reset();
-```
+    }
 
 });
 
-}
+topBtn.addEventListener("click", function () {
 
-// =======================
-// Card Hover Effect
-// =======================
+    window.scrollTo({
 
-const cards =
-document.querySelectorAll(
-".card,.service-card"
-);
+        top: 0,
 
-cards.forEach(card=>{
+        behavior: "smooth"
 
-card.addEventListener(
-"mouseenter",
-()=>{
+    });
 
-card.style.transform=
-"translateY(-5px)";
+});
+const commandCards=document.querySelectorAll(".command-card");
+
+commandCards.forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="translateY(-10px) scale(1.03)";
 
 });
 
-card.addEventListener(
-"mouseleave",
-()=>{
+card.addEventListener("mouseleave",()=>{
 
-card.style.transform=
-"translateY(0px)";
+card.style.transform="translateY(0px) scale(1)";
 
 });
 
 });
-
-// =======================
-// FAQ Effect
-// =======================
-
-const faqItems =
-document.querySelectorAll(
-".faq-item"
-);
-
-faqItems.forEach(item=>{
-
-item.addEventListener(
-"click",
-()=>{
-
-item.classList.toggle(
-"active"
-);
-
-});
-
-});
-
-// =======================
-// Navbar Shadow
-// =======================
-
-window.addEventListener(
-"scroll",
-()=>{
-
-const navbar =
-document.querySelector(
-".navbar"
-);
-
-if(window.scrollY > 50){
-
-navbar.style.boxShadow =
-"0 5px 20px rgba(0,0,0,.3)";
-
-}else{
-
-navbar.style.boxShadow =
-"none";
-
-}
-
-});
-
-console.log(
-"RoadRescue AI Ready"
-);
